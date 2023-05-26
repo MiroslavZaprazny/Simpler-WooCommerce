@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: rgb(228, 226, 226);
+}
+
+.nav > .left-panel {
+    display: flex;
+    align-items: center;
+}
+
+.nav > .right-panel {
+    margin-right: 100px;
+}
+
+.nav > .left-panel > div.nav-child {
+    margin-left: 60px;
+}

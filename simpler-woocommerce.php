@@ -18,6 +18,11 @@ class SimplerWooCommerce
             'admin_menu',
             [$this, 'addAdminPage'],
         );
+
+        add_action(
+            'admin_enqueue_scripts',
+            [$this, 'enqueue']
+        );
     }
 
     public function addAdminPage()
@@ -35,8 +40,18 @@ class SimplerWooCommerce
     {
         require_once plugin_dir_path(__FILE__) . 'view/dashboard.php';
     }
+
+    public function enqueue()
+    {
+        wp_register_style(
+            'custom_wp_admin_css',
+            plugins_url('/assets/dashboard.css', __FILE__),
+            false,
+            '1.0.0'
+        );
+        wp_enqueue_style('custom_wp_admin_css');
+    }
 }
 
 $plugin = new SimplerWooCommerce();
 $plugin->activate();
-// register_activation_hook(__FILE__, [$plugin, 'activate']);
