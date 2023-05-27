@@ -14,9 +14,16 @@
             </div>
         </div>
         <div class="right-panel">
-            <p>
-                chat goes here
-            </p>
+            <div class="nav-child">
+                <p>
+                    settings
+                </p>
+            </div>
+            <div class="nav-child">
+                <p>
+                    chat goes here
+                </p>
+            </div>
         </div>
     </div>
 </div>

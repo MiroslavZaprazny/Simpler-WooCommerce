@@ -1,0 +1,10 @@
+{
+    "name": "miroslav/simpler-woocommerce",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Plugin\\": "src/"
+        }
+    },
+    "require": {}
+}

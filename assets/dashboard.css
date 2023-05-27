@@ -13,9 +13,15 @@
 }
 
 .nav > .right-panel {
+    display: flex;
+    align-items: center;
     margin-right: 100px;
 }
 
 .nav > .left-panel > div.nav-child {
+    margin-left: 60px;
+}
+
+.nav > .right-panel > div.nav-child {
     margin-left: 60px;
 }
