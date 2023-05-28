@@ -31,7 +31,6 @@ class Admin
             'Simpler WooCommerce',
             'manage_options',
             'simpler_woo',
-            [$this->dashboard, 'render'],
         );
 
         add_submenu_page(

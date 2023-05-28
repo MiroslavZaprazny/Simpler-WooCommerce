@@ -2,10 +2,12 @@
 
 namespace Plugin\Core\Pages;
 
-class Dashboard
+class Dashboard extends Page
 {
     public function __construct()
     {
+        parent::__construct();
+
         add_action(
             'admin_enqueue_scripts',
             [$this, 'enqueue']
