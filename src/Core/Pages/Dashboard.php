@@ -2,10 +2,16 @@
 
 namespace Plugin\Core\Pages;
 
+use Automattic\WooCommerce\Client;
+
 class Dashboard
 {
+    private Client $client;
+
     public function __construct()
     {
+        $this->client = woocommerce();
+
         add_action(
             'admin_enqueue_scripts',
             [$this, 'enqueue']
