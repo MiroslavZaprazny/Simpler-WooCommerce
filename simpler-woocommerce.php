@@ -7,7 +7,6 @@
 */
 
 use Plugin\Core\Admin;
-use Automattic\WooCommerce\Client;
 use Plugin\Core\Database\Credentials;
 
 if (!defined('ABSPATH')) {
@@ -23,13 +22,3 @@ $plugin->activate();
 
 $wooCommerceCredentails = new Credentials();
 register_activation_hook(__FILE__, [$wooCommerceCredentails, 'createTable']);
-
-function woocommerce(): ?Client
-{
-    //TODO: query db to find credentials
-    return new Client(
-        'storerl',
-        'consumer_key',
-        'consumer_secret',
-    );
-}

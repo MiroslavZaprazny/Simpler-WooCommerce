@@ -2,15 +2,11 @@
 
 namespace Plugin\Core\Pages;
 
-use Automattic\WooCommerce\Client;
-
-class Dashboard
+class Dashboard extends Page
 {
-    private Client $client;
-
     public function __construct()
     {
-        $this->client = woocommerce();
+        parent::__construct();
 
         add_action(
             'admin_enqueue_scripts',
