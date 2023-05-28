@@ -6,5 +6,7 @@
             "Plugin\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "automattic/woocommerce": "^3.1"
+    }
 }

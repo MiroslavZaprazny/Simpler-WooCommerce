@@ -1,10 +1,11 @@
 <form action="" method="post">
     <label for="">
-        Api key
+        WooCommerce REST Api key
     </label>
     <input type="text">
     <label for="">
-        Api secret
+        WooCommerce REST Api secret
     </label>
     <input type="text">
+    <button type="submit">Submit</button>
 </form>
