@@ -13,4 +13,9 @@ class Settings extends Page
     {
         require_once plugin_dir_path(__FILE__) . '../../view/settings.php';
     }
+
+    public function create(string $url, string $key, string $secret)
+    {
+        //TODO: insert to db
+    }
 }

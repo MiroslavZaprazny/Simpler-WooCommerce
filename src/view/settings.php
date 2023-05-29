@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/partials/nav.php' ?>
 
-<form action="" method="post">
+<form action="<?= WP_PLUGIN_URL . '/simpler-woocommerce/src/Actions/settings-form.php' ?>" method="post">
     <label for="">
         Site URL
     </label>
