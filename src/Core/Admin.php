@@ -16,7 +16,7 @@ class Admin
         $this->settings = new Settings();
     }
 
-    public function activate()
+    public function activate(): void
     {
         add_action(
             'admin_menu',
@@ -24,7 +24,7 @@ class Admin
         );
     }
 
-    public function menu()
+    public function menu(): void
     {
         add_menu_page(
             'Simpler WooCommerce',

@@ -2,6 +2,8 @@
 
 namespace Plugin\Core\Pages;
 
+use Plugin\Core\Database\Credentials;
+
 class Settings extends Page
 {
     public function __construct()
@@ -9,13 +11,14 @@ class Settings extends Page
         parent::__construct();
     }
 
-    public function render()
+    public function render(): void
     {
         require_once plugin_dir_path(__FILE__) . '../../view/settings.php';
     }
 
-    public function create(string $url, string $key, string $secret)
+    public function store(string $url, string $key, string $secret): void
     {
-        //TODO: insert to db
+        $credentials = new Credentials();
+        $credentials->createNewCredentials($url, $key, $secret);
     }
 }

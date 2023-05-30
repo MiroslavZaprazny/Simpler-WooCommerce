@@ -14,12 +14,12 @@ class Dashboard extends Page
         );
     }
 
-    public function render()
+    public function render(): void
     {
         require_once plugin_dir_path(__FILE__) . '../../view/dashboard.php';
     }
 
-    public function enqueue()
+    public function enqueue(): void
     {
         wp_register_style(
             'custom_wp_admin_css',
