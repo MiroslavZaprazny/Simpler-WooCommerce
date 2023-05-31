@@ -20,6 +20,11 @@ class Page
                 $this->credentials->url ?? '',
                 $this->credentials->consumer_key ?? '',
                 $this->credentials->consumer_secret ?? '',
+                [
+                    'wp_api' => true,
+                    'version' => 'wc/v3',
+                    'timeout' => 400
+                ]
             );
     }
 }
