@@ -13,7 +13,8 @@ class Credentials
         $this->wpdb = $wpdb;
         $this->tableName = $this->wpdb->prefix . "woocommerce_api_credentials";
     }
-    public function createTable()
+
+    public function createTable(): void
     {
         $charset = $this->wpdb->get_charset_collate();
 
@@ -29,11 +30,52 @@ class Credentials
         dbDelta($sql);
     }
 
-    public function get()
+    public function get(): ?object
     {
         return $this->wpdb->get_row(
             "SELECT * FROM $this->tableName",
             OBJECT
+        );
+    }
+
+    public function createNewCredentials(string $url, string $key, string $secret): void
+    {
+        $credentials = $this->get();
+
+        if ($credentials === null) {
+            $this->wpdb->insert(
+                $this->tableName,
+                [
+                    'url' => $url,
+                    'consumer_key' => $key,
+                    'consumer_secret' => $secret,
+                ],
+                [
+                    '%s',
+                    '%s',
+                    '%s',
+                ]
+            );
+
+            return;
+        }
+
+        $this->wpdb->update(
+            $this->tableName,
+            [
+                'url' => $url,
+                'consumer_key' => $key,
+                'consumer_secret' => $secret,
+            ],
+            ['id' => $credentials->id],
+            [
+                '%s',
+                '%s',
+                '%s',
+            ],
+            [
+                '%d'
+            ]
         );
     }
 }
