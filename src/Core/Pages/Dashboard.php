@@ -4,16 +4,13 @@ namespace Plugin\Core\Pages;
 
 class Dashboard extends Page
 {
-    private array $orders;
+    public array $orders;
 
     public function __construct()
     {
         parent::__construct();
 
         $this->orders = $this->client->get('orders');
-        // echo "<pre>";
-        // var_dump($this->orders);
-        // exit;
 
         add_action(
             'admin_enqueue_scripts',

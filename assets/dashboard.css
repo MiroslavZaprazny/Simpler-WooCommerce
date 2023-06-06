@@ -1,27 +1,7 @@
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 15px;
-    padding-left: 20px;
+.body {
     background-color: rgb(228, 226, 226);
 }
 
-.nav > .left-panel {
-    display: flex;
-    align-items: center;
-}
-
-.nav > .right-panel {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-}
-
-.nav > .left-panel > div.nav-child {
-    margin-left: 60px;
-}
-
-.nav > .right-panel > div.nav-child {
-    margin-left: 60px;
+#wpcontent {
+    padding-left: 0% !important;
 }

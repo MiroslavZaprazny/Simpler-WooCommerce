@@ -26,5 +26,22 @@ class Page
                     'timeout' => 400
                 ]
             );
+
+        add_action(
+            'admin_enqueue_scripts',
+            [$this, 'enqueue']
+        );
+    }
+
+    public function enqueue(): void
+    {
+        wp_register_style(
+            'navbar-css',
+            plugins_url('../../../assets/navbar.css', __FILE__),
+            false,
+            '1.0.0'
+        );
+
+        wp_enqueue_style('navbar-css');
     }
 }
