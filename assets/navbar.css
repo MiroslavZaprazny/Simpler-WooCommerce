@@ -35,14 +35,6 @@
     top: 15%;
 }
 
-.flex {
-    display: flex;
-}
-
-.align-center {
-    align-items: center;
-}
-
 .nav-icon {
     width: 15px;
     height: 15px;

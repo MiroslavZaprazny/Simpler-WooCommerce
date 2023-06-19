@@ -1,0 +1,27 @@
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mt-5 {
+    margin-top: 25px;
+}
+
+.ml-5 {
+    margin-left: 25px;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.w-50 {
+    width: 50%;
+}

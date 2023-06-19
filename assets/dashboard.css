@@ -1,7 +1,62 @@
+:root{
+  --radius-1: 70%;
+  --radius-2: 30%;
+  --radius-3: 30%;
+  --radius-4: 70%;
+  --radius-5: 60%;
+  --radius-6: 40%;
+  --radius-7: 60%;
+  --radius-8: 40%;
+}
+
 .body {
-    background-color: rgb(228, 226, 226);
+    position: relative;
 }
 
 #wpcontent {
     padding-left: 0% !important;
+}
+
+.tab-section {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 50px;
+}
+
+.link > svg {
+    max-width: 50px;
+    height: 40px;
+}
+
+.tab {
+    margin-left: 25px;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 17px 20px 17px;
+    background-color: white;
+    border-radius: 25px;
+    width: 90px;
+    max-width: 150px;
+    max-height: 150px;
+    text-align: center;
+}
+
+.blob {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
+    background-image: linear-gradient(to right, rgba(7, 154, 223), rgba(34, 84, 161));
+    opacity: 80%;
+    filter: blur(2px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    z-index: -99;
 }

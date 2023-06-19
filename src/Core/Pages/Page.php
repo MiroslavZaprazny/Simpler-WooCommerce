@@ -36,12 +36,20 @@ class Page
     public function enqueue(): void
     {
         wp_register_style(
-            'navbar-css',
+            'navbar',
             plugins_url('../../../assets/navbar.css', __FILE__),
             false,
             '1.0.0'
         );
 
-        wp_enqueue_style('navbar-css');
+        wp_register_style(
+            'main',
+            plugins_url('../../../assets/main.css', __FILE__),
+            false,
+            '1.0.0'
+        );
+
+        wp_enqueue_style('navbar');
+        wp_enqueue_style('main');
     }
 }

@@ -26,7 +26,7 @@ class Dashboard extends Page
     public function enqueue(): void
     {
         wp_register_style(
-            'custom_wp_admin_css',
+            'dashboard-css',
             plugins_url('../../../assets/dashboard.css', __FILE__),
             false,
             '1.0.0'
@@ -49,7 +49,7 @@ class Dashboard extends Page
             '1.0.0'
         );
 
-        wp_enqueue_style('custom_wp_admin_css');
+        wp_enqueue_style('dashboard-css');
         wp_enqueue_script('jquery');
         wp_enqueue_script('data-table-js');
         wp_enqueue_style('data-table-css');
