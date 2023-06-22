@@ -20,7 +20,6 @@
 .tab-section {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -53,6 +52,8 @@
     text-align: center;
     font-weight: bold;
     font-size: medium;
+    text-decoration: none;
+    color: black;
 }
 
 .blob {
@@ -68,6 +69,30 @@
     top: 20px; 
     right: 20px;
     z-index: -99;
+}
+
+.chat {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    margin-top: 20px;
+    color: white;
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    color: black;
+}
+
+.chat-bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
 }
 
 @media (max-width: 1500px) {

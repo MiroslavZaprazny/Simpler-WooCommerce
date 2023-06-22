@@ -29,3 +29,7 @@
 .flex-wrap {
     flex-wrap: wrap;
 }
+
+.text-bold {
+    font-weight: bold;
+}

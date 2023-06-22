@@ -1,7 +1,6 @@
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-top: 15px;
     padding-left: 20px;
     background-color: white;
@@ -10,29 +9,15 @@
 .nav > .left-panel {
     display: flex;
     align-items: center;
-    position: relative;
-}
-
-.nav > .right-panel {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
+    width: 40%;
 }
 
 .nav > .left-panel > div.nav-child {
-    margin-left: 60px;
-}
-
-.nav > .right-panel > div.nav-child {
-    margin-left: 60px;
+    margin-left: 10px;
 }
 
 .logo {
-    position: absolute;
-    width: 60px;
-    height: 50px;
-    left: -5%;
-    top: 15%;
+    height: 40px;
 }
 
 .nav-icon {
@@ -40,4 +25,8 @@
     height: 15px;
     margin-right: 5px;
     margin-top: 2px;
+}
+
+.text-xl {
+    font-size: x-large;
 }
