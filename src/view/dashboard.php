@@ -139,8 +139,8 @@
 
 </div>
 <div class="blob"> </div>
-<div>
-    <table id="tblUser">
+<div class="table-container">
+    <table id="table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -165,8 +165,14 @@
 
 <script>
     jQuery(document).ready(function($) {
-        $('#tblUser').DataTable({
-            "lengthChange": false
+        $('#table').DataTable({
+            "lengthChange": false,
+            "info": false,
         });
+
+        $("#table_filter input").attr('placeholder', 'SEARCH...')
+        $("#table_filter").wrap('<div class="table-tab-container flex flex-wrap justify-between align-center"></div>')
+        $(".table-tab-container").append('<div class="table-tab"> <p>Todays <br> orders</p> <p>35</p></div>')
+        $(".table-tab-container").append('<div class="table-tab"> <p>Unfinished <br> orders</p> <p>35</p></div>')
     });
 </script>

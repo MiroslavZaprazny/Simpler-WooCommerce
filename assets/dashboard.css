@@ -9,12 +9,16 @@
   --radius-8: 40%;
 }
 
-.body {
-    position: relative;
-}
-
 #wpcontent {
     padding-left: 0% !important;
+}
+
+#wpfooter {
+    display: none;
+}
+
+.body {
+    position: relative;
 }
 
 .tab-section {
@@ -43,7 +47,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px 19px 20px 19px;
+    padding: 15px 17px 20px 19px;
     background-color: white;
     border-radius: 30px;
     width: 95px;
@@ -93,6 +97,73 @@
     border-radius: 20px;
     width: 80px;
     height: 80px;
+}
+
+.table-container{
+    padding: 0px 40px 0px 40px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: left !important;
+    text-align: left !important;
+}
+
+.table.dataTable.no-footer {
+    border-bottom: transparent !important;
+}
+
+.table.dataTable thead th, table.dataTable thead td {
+    border-bottom: transparent !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: transparent !important;
+    border-radius: 8px !important;
+    padding: 5px 5px 5px 50px !important;
+    background-color: white !important;
+    margin-left: 0px !important;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    height: 90px;
+    font-size: large;
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+#table_filter {
+    width: 35%;
+}
+
+.table-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: transparent;
+    border-radius: 8px;
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+    width: 25%;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    height: 85px;
+}
+
+.table-tab p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-tab-container {
+    margin-bottom: 30px;
+}
+
+.dataTables_filter input::placeholder {
+    color: rgb(178, 178, 178);
+    font-weight: bold;
+    /* padding-left: 15px; */
+}
+
+.dataTables_filter label {
+    color: transparent;
+    font-size: 0%;
 }
 
 @media (max-width: 1500px) {
