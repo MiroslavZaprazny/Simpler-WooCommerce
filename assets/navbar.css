@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: white;
+}
+
+.nav > .left-panel {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.nav > .left-panel > div.nav-child {
+    margin-left: 10px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.text-xl {
+    font-size: x-large;
+}
