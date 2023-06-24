@@ -38,8 +38,8 @@
     height: 40px;
 }
 
-.tab {
-    margin-left: 50px;
+.tab-section > .tab:not(:first-child) {
+    margin-left: 30px;
 }
 
 .link:hover {
