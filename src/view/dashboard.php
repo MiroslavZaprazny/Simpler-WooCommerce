@@ -1,4 +1,6 @@
-<?php require_once __DIR__ . '/partials/nav.php' ?>
+<?php
+require_once __DIR__ . '/partials/nav.php'
+?>
 <div class="body">
     <div class="chat">
         <div class="chat-bubble">
@@ -176,8 +178,12 @@
                         <?= $order->billing->first_name . ' ' . $order->billing->last_name ?>
                     </td>
                     <td>
-                        <!-- TODO: icon -->
-                        <?= $order->status ?>
+                        <div class="flex align-center justify-center">
+                            <div class="<?= $order->status ?>-order-icon"></div>
+                            <p>
+                                <?= $order->status ?>
+                            </p>
+                        </div>
                     </td>
                     <td>
                         products: <?= count($order->line_items) ?>
@@ -205,7 +211,7 @@
 
         $("#table_filter input").attr('placeholder', 'SEARCH...')
         $("#table_filter").wrap('<div class="table-tab-container flex flex-wrap justify-between align-center"></div>')
-        $(".table-tab-container").append('<div class="table-tab"> <p>Todays <br> orders</p> <p>35</p></div>')
-        $(".table-tab-container").append('<div class="table-tab"> <p>Unfinished <br> orders</p> <p>35</p></div>')
+        $(".table-tab-container").append('<div class="table-tab"> <p>TODAYS<br> ORDERS</p> <p>35</p></div>')
+        $(".table-tab-container").append('<div class="table-tab"> <p>UNFINISHED <br> ORDERS</p> <p>35</p></div>')
     });
 </script>

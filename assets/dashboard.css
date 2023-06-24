@@ -192,6 +192,13 @@
 #table td, th {
     padding: 15px !important;
     text-align: center !important;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#table p {
+    font-size: medium;
+    font-weight: bold;
 }
 
 #table td:first-child {
@@ -226,4 +233,60 @@ table.dataTable.no-footer {
     width: 20px;
     margin-top: 3px;
     margin-left: 5px;
+}
+
+.pending-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: orange;
+    margin-right: 5px;
+}
+
+.processing-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 123, 0);
+    margin-right: 5px;
+}
+
+.on-hold-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(3, 29, 226);
+    margin-right: 5px;
+}
+
+.completed-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(0, 220, 15);
+    margin-right: 5px;
+}
+
+.cancelled-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(220, 0, 0);
+    margin-right: 5px;
+}
+
+.refunded-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(147, 0, 220);
+    margin-right: 5px;
+}
+
+.failed-order-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(220, 0, 0);
+    margin-right: 5px;
 }
