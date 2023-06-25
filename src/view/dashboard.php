@@ -174,7 +174,7 @@ require_once __DIR__ . '/partials/nav.php'
         <tbody>
             <?php foreach ($this->orders as $order) { ?>
                 <tr>
-                    <td>
+                    <td onclick="window.location='<?= get_admin_url() . sprintf('post.php?post=%s&action=edit', $order->id) ?>';">
                         <?= $order->billing->first_name . ' ' . $order->billing->last_name ?>
                     </td>
                     <td>
@@ -211,7 +211,7 @@ require_once __DIR__ . '/partials/nav.php'
 
         $("#table_filter input").attr('placeholder', 'SEARCH...')
         $("#table_filter").wrap('<div class="table-tab-container flex flex-wrap justify-between align-center"></div>')
-        $(".table-tab-container").append('<div class="table-tab"> <p>TODAYS<br> ORDERS</p> <p>35</p></div>')
-        $(".table-tab-container").append('<div class="table-tab"> <p>UNFINISHED <br> ORDERS</p> <p>35</p></div>')
+        $(".table-tab-container").append('<div class="table-tab"> <p>TODAYS<br> ORDERS</p> <p><?= $this->todaysOrders ?></p></div>')
+        $(".table-tab-container").append('<div class="table-tab"> <p>UNFINISHED <br> ORDERS</p> <p><?= $this->unfinishedOrders ?></p></div>')
     });
 </script>

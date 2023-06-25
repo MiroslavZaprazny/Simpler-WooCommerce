@@ -190,15 +190,28 @@
 }
 
 #table td, th {
-    padding: 15px !important;
     text-align: center !important;
     font-size: medium;
     font-weight: bold;
 }
 
+#table th {
+    padding: 15px !important;
+}
+
 #table p {
     font-size: medium;
     font-weight: bold;
+}
+
+#table tbody tr {
+    cursor: pointer;
+}
+
+#table tbody tr:hover > td:first-child {
+    border-left: 10px solid rgb(21, 101, 171);
+    height: 100%;
+    transition: all 150ms ease-in-out;
 }
 
 #table td:first-child {

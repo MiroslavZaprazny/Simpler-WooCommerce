@@ -5,12 +5,18 @@ namespace Plugin\Core\Pages;
 class Dashboard extends Page
 {
     public array $orders;
+    public int $todaysOrders;
+    public int $unfinishedOrders;
 
     public function __construct()
     {
         parent::__construct();
 
-        $this->orders = $this->client->get('orders');
+        $this->orders = (array) $this->client->get('orders');
+        $this->todaysOrders = count(array_filter($this->orders, fn ($order) => date('Ymd') == date('Ymd', strtotime($order->date_created))));
+        $this->unfinishedOrders = count(
+            array_filter($this->orders, fn ($order) => $order->status === 'pending' || $order->status === 'processing' || $order->status === 'on-hold')
+        );
 
         add_action(
             'admin_enqueue_scripts',
