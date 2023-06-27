@@ -33,11 +33,6 @@
    }
 }
 
-.link > svg {
-    max-width: 50px;
-    height: 40px;
-}
-
 .tab-section > .tab:not(:first-child) {
     margin-left: 30px;
 }
@@ -45,8 +40,21 @@
 .link:hover {
     cursor: pointer;
     background-image: linear-gradient(to right, rgba(7, 154, 223), rgba(34, 84, 161));
-    color: white;
+    color: white !important;
 }
+
+.link:hover > svg > path {
+    fill: white !important;
+}
+
+.link:hover > .add-product > path {
+    fill: black !important;
+}
+
+.link:hover > .add-product {
+    fill: black !important;
+}
+
 
 .link {
     display: flex;
@@ -183,10 +191,9 @@
 }
 
 #table {
-    /* border-collapse: collapse; */
-    /* border-radius: 1em; */
     border-spacing: 0em 1em;
     overflow: hidden;
+    width: 100%;
 }
 
 #table td, th {
